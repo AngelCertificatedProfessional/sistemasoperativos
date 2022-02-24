@@ -21,6 +21,11 @@ do
     do
         echo "Favor de ingresar la hora: (0,23)"
         read nHora
+        if [ $nHora -lt 0 -o $nHora -gt 23 ]
+            then
+            echo "El dia tiene que estar entre el rango de: (1 a 7)"
+            echo "Favor de volver a ingresar el dia"
+        fi
     done
 
     case $nDia in
